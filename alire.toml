@@ -12,14 +12,18 @@ Library](https://github.com/AdaCore/Ada_Drivers_Library/) repo.
 '''
 
 name = "microbit_bsp"
-version = "0.2.0"
-licenses = ["BSD 3-Clauses"]
+version = "0.2.1"
+licenses = "BSD-3-Clause"
 website="https://github.com/AdaCore/Ada_Drivers_Library/"
 maintainers = ["chouteau@adacore.com"]
 maintainers-logins = ["Fabien-Chouteau"]
+project-files = ["microbit_bsp.gpr"]
 tags = ["embedded", "nostd", "microbit", "bbc", "nrf51", "bsp"]
 
 [[depends-on]]
-hal = "^0.1.0"
-nrf5x_hal = "^0.1.0"
-embedded_components = "^0.1.0"
+hal = "~0.1.0"
+nrf5x_hal = "~0.1.0"
+embedded_components = "~0.1.0"
+
+[build-switches]
+"*".style_checks = "no"
